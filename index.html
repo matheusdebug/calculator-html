@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+ <title> Calculadora </title>
+<div class="resultado" id="resultado">Null</div>
+<div class="calc_body" id="calc_body">
+<input type="text" class="input" id="numero1" placeholder="Number 1"> <br>
+<input type="text" class="input" id="numero2" placeholder="Number 2"> <br>
+<button class="botao" onclick="soma()">SOMAR</button> <br>
+<button class="botao" onclick="subtracao()">SUBTRAIR</button> <br>
+<button class="botao" onclick=" mutiplicacao()">MULTIPLICAR</button> <br>
+<button class="botao" onclick=" divisao()">DIVIDIR</button> <br>
+</div>
+<br>
+<hr>
+<p style="font-size: 20px;"><b>LUP - Laboratório Universitário de Programação</b></p>
+<p>Nota da Versão: <i>1.0.0</i></p>
+
+
+<script>
+    function soma(){
+        var numero1 = document.getElementById("numero1").value;
+        var numero2 = document.getElementById("numero2").value;
+        var resultado = parseInt(numero1) + parseInt(numero2);
+        document.getElementById("resultado").innerHTML=resultado;   
+    }
+
+    function subtracao(){
+        var numero1 = document.getElementById("numero1").value;
+        var numero2 = document.getElementById("numero2").value;
+        var resultado = parseInt(numero1) - parseInt(numero2);
+        document.getElementById("resultado").innerHTML=resultado;   
+    }
+
+    function divisao(){
+        var numero1 = document.getElementById("numero1").value;
+        var numero2 = document.getElementById("numero2").value;
+        var resultado = parseInt(numero1) / parseInt(numero2);
+        document.getElementById("resultado").innerHTML=resultado; 
+    }
+
+    function mutiplicacao(){
+        var numero1 = document.getElementById("numero1").value;
+        var numero2 = document.getElementById("numero2").value;
+        var resultado = parseInt(numero1) * parseInt(numero2);
+        document.getElementById("resultado").innerHTML=resultado;   
+    }
+
+</script>
