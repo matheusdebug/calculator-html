@@ -12,7 +12,7 @@
 <br>
 <hr>
 <p style="font-size: 20px;"><b>LUP - Laboratório Universitário de Programação</b></p>
-<p>Nota da Versão: <i>1.0.0</i></p>
+<p>Nota da Versão: <i>1.0.1</i></p>
 
 
 <script>
@@ -35,6 +35,14 @@
         var numero2 = document.getElementById("numero2").value;
         var resultado = parseInt(numero1) / parseInt(numero2);
         document.getElementById("resultado").innerHTML=resultado; 
+        
+        if (numero2==0){
+        document.getElementById("resultado").innerHTML="ERROR";
+        document.getElementById("resultado").style="color: red;";
+        alert("Não é permitida divisão por zero!")    
+        } else {
+        document.getElementById("resultado").style="color: black";
+        }
     }
 
     function mutiplicacao(){
