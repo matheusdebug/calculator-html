@@ -19,6 +19,7 @@
 <div class="space2" id="space2"> 
 <button class="botao3" onclick="porcent()" style="color: white;">%</button>
 <button class="botao3" onclick="potencia()" style="color: white">X^</button>
+<button class="botao4" onclick="fatorial()" style="color: white">X!</button>
 </div>
 <br>
 <hr>
@@ -95,13 +96,22 @@
         document.getElementById("resultado").innerHTML = "Expoente negativo não suportado ainda";
         return;
     }
-
-    for (var i = 0; i < numero2; i++) {
-        resultado *= numero1;
-    }
-
+    resultado=numero1**numero2;
     document.getElementById("resultado").innerHTML = resultado;
 }
+
+function fatorial() {
+    var numero1 = parseInt(document.getElementById("numero1").value)
+    var i = numero1;
+
+    while (i!=1){
+        i--
+        numero1*=i
+    }
+
+    document.getElementById("resultado").innerHTML=numero1;
+}
+
     
 
 </script>
